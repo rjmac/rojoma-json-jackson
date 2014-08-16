@@ -2,7 +2,7 @@ organization := "com.rojoma"
 
 name := "rojoma-json-v3-jackson"
 
-version := "1.0.0-SNAPSHOT"
+version := "1.0.0"
 
 libraryDependencies ++= Seq(
   "com.rojoma" %% "rojoma-json-v3" % "[3.1.2,4.0.0)",
