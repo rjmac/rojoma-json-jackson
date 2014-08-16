@@ -1,8 +1,15 @@
+import com.typesafe.tools.mima.plugin.MimaPlugin.mimaDefaultSettings
+import com.typesafe.tools.mima.plugin.MimaKeys.previousArtifact
+
+mimaDefaultSettings
+
 organization := "com.rojoma"
 
 name := "rojoma-json-v3-jackson"
 
-version := "1.0.0"
+version := "1.1.0-SNAPSHOT"
+
+previousArtifact := Some("com.rojoma" % ("rojoma-json-v3-jackson_" + scalaBinaryVersion.value) % "1.0.0")
 
 libraryDependencies ++= Seq(
   "com.rojoma" %% "rojoma-json-v3" % "[3.1.2,4.0.0)",
