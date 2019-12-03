@@ -15,15 +15,15 @@ libraryDependencies ++= Seq(
   "com.rojoma" %% "rojoma-json-v3" % "[3.1.2,4.0.0)",
   "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.2" % "optional",
   "org.codehaus.jackson" % "jackson-mapper-asl" % "1.9.13" % "optional",
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test",
+  "org.scalatest" %% "scalatest" % "3.0.8" % "test",
   "org.scalacheck" %% "scalacheck" % "1.14.0" % "test"
 )
 
 scalacOptions ++= Seq("-feature", "-deprecation")
 
-scalaVersion := "2.12.8"
+scalaVersion := "2.13.1"
 
-crossScalaVersions := Seq("2.10.4", "2.11.2", scalaVersion.value)
+crossScalaVersions := Seq("2.10.4", "2.11.2", "2.12.8", scalaVersion.value)
 
 testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD")
 
