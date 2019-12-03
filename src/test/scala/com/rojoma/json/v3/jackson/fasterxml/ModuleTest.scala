@@ -2,7 +2,7 @@ package com.rojoma.json.v3.jackson.fasterxml
 
 import org.scalatest.{FunSuite, MustMatchers}
 import org.scalatest.matchers.{Matcher, MatchResult}
-import org.scalatest.prop.PropertyChecks
+import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 
 import com.rojoma.json.v3.ast._
 import com.rojoma.json.v3.testsupport.ArbitraryJValue._
@@ -10,7 +10,7 @@ import com.rojoma.json.v3.testsupport.ArbitraryJValue._
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.core._
 
-class ModuleTest extends FunSuite with MustMatchers with PropertyChecks {
+class ModuleTest extends FunSuite with MustMatchers with ScalaCheckPropertyChecks {
   test("Serializing value must roundtrip") {
     val om = new ObjectMapper
     om.registerModule(Module)

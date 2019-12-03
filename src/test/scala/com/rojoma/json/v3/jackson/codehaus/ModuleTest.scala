@@ -1,14 +1,15 @@
 package com.rojoma.json.v3.jackson.codehaus
 
+
 import org.scalatest.{FunSuite, MustMatchers}
-import org.scalatest.prop.PropertyChecks
+import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 
 import com.rojoma.json.v3.ast._
 import com.rojoma.json.v3.testsupport.ArbitraryJValue._
 
 import org.codehaus.jackson.map.ObjectMapper
 
-class ModuleTest extends FunSuite with MustMatchers with PropertyChecks {
+class ModuleTest extends FunSuite with MustMatchers with ScalaCheckPropertyChecks {
   test("Serializing value must roundtrip") {
     val om = new ObjectMapper
     om.registerModule(Module)
